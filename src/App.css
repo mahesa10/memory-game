@@ -4,4 +4,7 @@
   height: 100vh;
   padding: 24px 48px;
   background-color: #FBFBFB;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
