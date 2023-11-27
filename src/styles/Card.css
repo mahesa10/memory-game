@@ -16,6 +16,7 @@
 .card:hover {
   background-color: #154677;
   color: #FFFFFF;
+  border: none;
 }
 
 .card:hover .country-name {
