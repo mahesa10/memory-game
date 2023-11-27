@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import Header from './Header'
-import Card from './Card'
+import CardContainer from './CardContainer'
 import './styles/App.css'
 
 function App() {
   return (
     <div id="wrapper">
       <Header></Header>
-      <Card></Card>
+      <CardContainer></CardContainer>
     </div>
   )
 }
