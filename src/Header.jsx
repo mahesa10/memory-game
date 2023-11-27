@@ -1,6 +1,6 @@
 import './styles/Header.css'
 
-function Header() {
+function Header({score, bestScore}) {
   return (
     <div className="header">
       <div className="title-container">
@@ -8,8 +8,8 @@ function Header() {
         <h2>Don't click the same flag twice!</h2>
       </div>
       <div className="score-container">
-        <p>Score: 0</p>
-        <p>Best Score: 0</p>
+        <p>Score: {score}</p>
+        <p>Best Score: {bestScore}</p>
       </div>
     </div>
   )

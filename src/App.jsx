@@ -4,7 +4,10 @@ import CardContainer from './CardContainer'
 import './styles/App.css'
 
 function App() {
-  const [selectedCountries, setSelectedCountries] = useState([]);
+  const [countryData, setCountryData] = useState([]);
+  const [selectedCountries, setSelectedCountries] = useState([])
+  const [score, setScore] = useState(0)
+  const [bestScore, setBestScore] = useState(0)
   
   const getRandomCountries = (data, n) => {
     let randomCountries = new Set()
@@ -14,7 +17,7 @@ function App() {
       randomCountries.add(data[Math.floor(Math.random() * dataSize)])
     }
 
-    setSelectedCountries([...randomCountries])
+    setCountryData([...randomCountries])
   }
 
   useEffect(() => {
@@ -38,15 +41,26 @@ function App() {
     return newArr;
   }
 
-  const handleCardClick = () => {
-    const shuffledCountries = shuffleArray(selectedCountries)
-    setSelectedCountries(shuffledCountries)
+  const handleShuffle = () => {
+    const shuffledCountries = shuffleArray(countryData)
+    setCountryData(shuffledCountries)
+  }
+
+  const handleScore = (countryName) => {
+    if (!selectedCountries.includes(countryName)) {
+      setSelectedCountries([...selectedCountries, countryName])
+      setScore(score + 1)
+      if (score === bestScore) setBestScore(bestScore + 1)
+    } else {
+      setScore(0)
+      setSelectedCountries([])
+    }
   }
 
   return (
     <div id="wrapper">
-      <Header></Header>
-      <CardContainer data={selectedCountries} clickFn={handleCardClick}></CardContainer>
+      <Header score={score} bestScore={bestScore}></Header>
+      <CardContainer data={countryData} handleShuffle={handleShuffle} handleScore={handleScore}></CardContainer>
     </div>
   )
 }
