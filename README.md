@@ -12,8 +12,8 @@ Welcome to the Country Flag Memory Game! This project challenges your memory by 
 
 1. **Clone the Repository:**
    ```
-   git clone https://github.com/your-username/country-flag-memory-game.git
-   cd country-flag-memory-game
+   git clone https://github.com/mahesa10/memory-game.git
+   cd memory-game
    ```
 
 2. **Install Dependencies:**
