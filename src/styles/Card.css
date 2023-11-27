@@ -9,6 +9,7 @@
   align-items: center;
   padding: 30px;
   gap: 24px;
+  box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.25);
 }
 
 .country-flag {
@@ -19,4 +20,5 @@
 
 .country-name {
   font-size: 20px;
+  color: #0F3256;
 }
