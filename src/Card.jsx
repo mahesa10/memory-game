@@ -1,10 +1,10 @@
 import './styles/Card.css'
 
-function Card() {
+function Card({countryName}) {
   return (
     <div className="card">
       <div className="country-flag"></div>
-      <p className='country-name'>Country Name</p>
+      <p className='country-name'>{countryName}</p>
     </div>
   )
 }
