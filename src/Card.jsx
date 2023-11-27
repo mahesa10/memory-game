@@ -1,9 +1,9 @@
 import './styles/Card.css'
 
-function Card({countryName}) {
+function Card({countryName, flagSrc}) {
   return (
     <div className="card">
-      <div className="country-flag"></div>
+      <img className="country-flag" src={flagSrc}></img>
       <p className='country-name'>{countryName}</p>
     </div>
   )

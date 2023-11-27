@@ -17,14 +17,14 @@ function CardContainer() {
   }
 
   useEffect(() => {
-    fetch('https://restcountries.com/v3.1/all?fields=name,flags')
+    fetch('https://restcountries.com/v3.1/independent?status=true&fields=name,flags')
       .then(response => response.json())
       .then(data => getRandomCountries(data, 8))
   }, [])
 
   return (
     <div className="card-container">
-      {selectedCountries ? selectedCountries.map((country, index) => <Card key={index} countryName={country.name.common}></Card>) : 'Loading...'}
+      {selectedCountries ? selectedCountries.map((country, index) => <Card key={index} countryName={country.name.common} flagSrc={country.flags.svg}></Card>) : 'Loading...'}
     </div>
   )
 }

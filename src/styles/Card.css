@@ -16,7 +16,7 @@
 .card:hover {
   background-color: #154677;
   color: #FFFFFF;
-  border: none;
+  border: 1px solid #154677;
 }
 
 .card:hover .country-name {
@@ -24,7 +24,6 @@
 }
 
 .country-flag {
-  width: 125px;
   height: 76px;
   background-color: #A6A6A6;
 }
